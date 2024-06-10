@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class PickLogic : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject RockOnPlayer;
     void Start()
     {
-        
+        RockOnPlayer.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-        
+        if (other.gameObject.tag == "Player")
+        {
+            if (Input.GetKey(Keycode.E))
+            {
+                this.RockOnPlayer.SetActive(false);
+                RockOnPlayer.SetActive(false);
+            }
+        }
     }
 }
