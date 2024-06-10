@@ -14,7 +14,7 @@ public class PickLogic : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKey(Keycode.E))
+            if (true)
             {
                 this.RockOnPlayer.SetActive(false);
                 RockOnPlayer.SetActive(false);
